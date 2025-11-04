@@ -8,9 +8,8 @@ type Props = {
 const Child1: React.FC<Props> = ({ name }) => {
   console.log("child1 comp has been re rendered");
   return (
-    <div>
+    <div >
       <div>{name}</div>
-      
     </div>
   );
 };
