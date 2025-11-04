@@ -1,7 +1,13 @@
+import ParentComponent from "./components/ParentComponent";
+
 function App() {
   console.log("App has been re-rendered");
 
-  return <h1>App</h1>;
+  return (
+    <h1>
+      <ParentComponent />
+    </h1>
+  );
 }
 
 export default App;
