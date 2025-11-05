@@ -1,16 +1,24 @@
-import React from "react";
+import { useEffect } from "react";
 import Child2 from "./Child2";
+import { Link } from "react-router-dom";
 
-type Props = {
-  count: number;
-};
+const Child1 = () => {
+  useEffect(() => {
+    console.log(
+      "this message will be printed the second Child1.tsx gets rendered"
+    );
 
-const Child1: React.FC<Props> = ({ count }) => {
-  console.log("child1 has been re rendered");
+    return () => {
+      console.log(
+        "this message will be printed when Child1.tsx gets removed from the DOM"
+      );
+    };
+  }, []);
+
   return (
     <div>
-      {count}
-      <Child2 />
+      Child1
+      <Link to={"/2"}>child2</Link>
     </div>
   );
 };

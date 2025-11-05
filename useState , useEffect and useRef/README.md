@@ -1,6 +1,8 @@
-# Use State
+# useEffect 
 
-useState returns an array with exactly two values:
+The function with your Effect’s logic. Your setup function may also optionally return a cleanup function. When your component is added to the DOM, React will run your setup function. After every re-render with changed dependencies,After your component is removed from the DOM, React will run your cleanup function.
 
-The current state. During the first render, it will match the initialState you have passed.
-The set function that lets you update the state to a different value and trigger a re-render.
+useEffect(() => {
+    //setup function
+    
+}, []) <- dependecy array
